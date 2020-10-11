@@ -60,6 +60,6 @@ echo -n "Packaging image..."
 id=$(tar --numeric-owner -C $ROOTFS -c . | docker import - alpine:$REL)
 echo "Done"
 echo -n "Testing package..."
-docker run --rm alpine:${REL} printf 'alpine:%s with id=%s created!\n' $REL $id
+docker run --rm alpine:${REL} printf 'Success! alpine:%s with id=%s created!\n' $REL $id
 echo "Done"
 
